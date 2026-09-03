@@ -1,0 +1,172 @@
+[
+ {
+  "allow_on_submit": 0,
+  "dt": "Prospect Booking Form",
+  "fieldname": "autoom_integration_section",
+  "fieldtype": "Section Break",
+  "insert_after": "veh_status",
+  "label": "Autoom Integration",
+  "name": "Prospect Booking Form-autoom_integration_section"
+ },
+ {
+  "dt": "Prospect Booking Form",
+  "fieldname": "erpnext_customer",
+  "fieldtype": "Link",
+  "insert_after": "autoom_integration_section",
+  "label": "ERPNext Customer",
+  "name": "Prospect Booking Form-erpnext_customer",
+  "options": "Customer",
+  "read_only": 1
+ },
+ {
+  "dt": "Prospect Booking Form",
+  "fieldname": "erpnext_contact",
+  "fieldtype": "Link",
+  "insert_after": "erpnext_customer",
+  "label": "ERPNext Contact",
+  "name": "Prospect Booking Form-erpnext_contact",
+  "options": "Contact",
+  "read_only": 1
+ },
+ {
+  "dt": "Prospect Booking Form",
+  "fieldname": "sync_status",
+  "fieldtype": "Select",
+  "insert_after": "erpnext_contact",
+  "label": "Sync Status",
+  "name": "Prospect Booking Form-sync_status",
+  "options": "Pending\nSynced\nError",
+  "read_only": 1
+ },
+ {
+  "dt": "Prospect Booking Form",
+  "fieldname": "last_sync_at",
+  "fieldtype": "Datetime",
+  "insert_after": "sync_status",
+  "label": "Last Sync At",
+  "name": "Prospect Booking Form-last_sync_at",
+  "read_only": 1
+ },
+ {
+  "dt": "Prospect Booking Form",
+  "fieldname": "sync_error",
+  "fieldtype": "Small Text",
+  "insert_after": "last_sync_at",
+  "label": "Sync Error",
+  "name": "Prospect Booking Form-sync_error",
+  "read_only": 1
+ },
+ {
+  "allow_on_submit": 0,
+  "dt": "VSO",
+  "fieldname": "autoom_integration_section",
+  "fieldtype": "Section Break",
+  "insert_after": "balance_down_payment",
+  "label": "Autoom Integration",
+  "name": "VSO-autoom_integration_section"
+ },
+ {
+  "dt": "VSO",
+  "fieldname": "erpnext_customer",
+  "fieldtype": "Link",
+  "insert_after": "autoom_integration_section",
+  "label": "ERPNext Customer",
+  "name": "VSO-erpnext_customer",
+  "options": "Customer",
+  "read_only": 1
+ },
+ {
+  "dt": "VSO",
+  "fieldname": "erpnext_contact",
+  "fieldtype": "Link",
+  "insert_after": "erpnext_customer",
+  "label": "ERPNext Contact",
+  "name": "VSO-erpnext_contact",
+  "options": "Contact",
+  "read_only": 1
+ },
+ {
+  "dt": "VSO",
+  "fieldname": "erpnext_sales_order",
+  "fieldtype": "Link",
+  "insert_after": "erpnext_contact",
+  "label": "ERPNext Sales Order",
+  "name": "VSO-erpnext_sales_order",
+  "options": "Sales Order",
+  "read_only": 1
+ },
+ {
+  "dt": "VSO",
+  "fieldname": "erpnext_serial_no",
+  "fieldtype": "Link",
+  "insert_after": "erpnext_sales_order",
+  "label": "ERPNext Serial No",
+  "name": "VSO-erpnext_serial_no",
+  "options": "Serial No",
+  "read_only": 1
+ },
+ {
+  "dt": "VSO",
+  "fieldname": "sync_status",
+  "fieldtype": "Select",
+  "insert_after": "erpnext_serial_no",
+  "label": "Sync Status",
+  "name": "VSO-sync_status",
+  "options": "Pending\nSynced\nError",
+  "read_only": 1
+ },
+ {
+  "dt": "VSO",
+  "fieldname": "last_sync_at",
+  "fieldtype": "Datetime",
+  "insert_after": "sync_status",
+  "label": "Last Sync At",
+  "name": "VSO-last_sync_at",
+  "read_only": 1
+ },
+ {
+  "dt": "VSO",
+  "fieldname": "sync_error",
+  "fieldtype": "Small Text",
+  "insert_after": "last_sync_at",
+  "label": "Sync Error",
+  "name": "VSO-sync_error",
+  "read_only": 1
+ },
+ {
+  "dt": "Car Details And Checklist",
+  "fieldname": "erpnext_serial_no",
+  "fieldtype": "Link",
+  "insert_after": "chassis_number",
+  "label": "ERPNext Serial No",
+  "name": "Car Details And Checklist-erpnext_serial_no",
+  "options": "Serial No"
+ },
+ {
+  "dt": "Car Details And Checklist",
+  "fieldname": "erpnext_sales_invoice",
+  "fieldtype": "Link",
+  "insert_after": "erpnext_serial_no",
+  "label": "ERPNext Sales Invoice",
+  "name": "Car Details And Checklist-erpnext_sales_invoice",
+  "options": "Sales Invoice"
+ },
+ {
+  "dt": "Car Model Variant",
+  "fieldname": "erpnext_item",
+  "fieldtype": "Link",
+  "insert_after": "model_code",
+  "label": "ERPNext Item",
+  "name": "Car Model Variant-erpnext_item",
+  "options": "Item"
+ },
+ {
+  "dt": "Sales Advisor",
+  "fieldname": "erpnext_employee",
+  "fieldtype": "Link",
+  "insert_after": "outlet_code",
+  "label": "ERPNext Employee",
+  "name": "Sales Advisor-erpnext_employee",
+  "options": "Employee"
+ }
+]

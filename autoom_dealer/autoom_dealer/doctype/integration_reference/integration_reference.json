@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:INTREF-{#####}",
+ "creation": "2026-03-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "source_doctype",
+  "source_name",
+  "column_break_1",
+  "company",
+  "section_break_erp",
+  "erpnext_doctype",
+  "erpnext_name",
+  "section_break_sync",
+  "sync_status",
+  "last_synced_at",
+  "sync_error"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Source DocType",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_name",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Source Name",
+   "options": "source_doctype",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_erp",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Target"
+  },
+  {
+   "fieldname": "erpnext_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ERPNext DocType",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "erpnext_name",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "ERPNext Name",
+   "options": "erpnext_doctype",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_sync",
+   "fieldtype": "Section Break",
+   "label": "Sync Status"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "sync_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Sync Status",
+   "options": "Pending\nSynced\nError",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_synced_at",
+   "fieldtype": "Datetime",
+   "label": "Last Synced At"
+  },
+  {
+   "fieldname": "sync_error",
+   "fieldtype": "Small Text",
+   "label": "Sync Error"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Autoom Dealer",
+ "name": "Integration Reference",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

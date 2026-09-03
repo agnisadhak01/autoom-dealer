@@ -1,0 +1,24 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "VSO",
+  "enabled": 1,
+  "modified": "2026-03-22 00:00:00.000000",
+  "module": "Autoom Dealer",
+  "name": "Autoom VSO Integration Buttons",
+  "script": "frappe.ui.form.on('VSO', {\n    refresh(frm) {\n        if (frm.is_new()) return;\n        frm.add_custom_button(__('Sync Customer'), () => {\n            frappe.call({\n                method: 'autoom_dealer.api.integration.sync_customer',\n                args: { source_doctype: 'VSO', source_name: frm.doc.name },\n                freeze: true,\n                callback(r) {\n                    frappe.msgprint(__('Customer synced: {0}', [r.message.customer]));\n                    frm.reload_doc();\n                }\n            });\n        }, __('Autoom'));\n        frm.add_custom_button(__('Create Sales Order'), () => {\n            frappe.call({\n                method: 'autoom_dealer.api.integration.create_sales_order',\n                args: { vso_name: frm.doc.name },\n                freeze: true,\n                callback(r) {\n                    const msg = r.message.action === 'already_linked'\n                        ? __('Already linked: {0}', [r.message.sales_order])\n                        : __('Sales Order created: {0}', [r.message.sales_order]);\n                    frappe.msgprint(msg);\n                    frm.reload_doc();\n                }\n            });\n        }, __('Autoom'));\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Prospect Booking Form",
+  "enabled": 1,
+  "modified": "2026-03-22 00:00:00.000000",
+  "module": "Autoom Dealer",
+  "name": "Autoom PBF Integration Buttons",
+  "script": "frappe.ui.form.on('Prospect Booking Form', {\n    refresh(frm) {\n        if (frm.is_new()) return;\n        frm.add_custom_button(__('Sync Customer'), () => {\n            frappe.call({\n                method: 'autoom_dealer.api.integration.sync_customer',\n                args: { source_doctype: 'Prospect Booking Form', source_name: frm.doc.name },\n                freeze: true,\n                callback(r) {\n                    frappe.msgprint(__('Customer synced: {0}', [r.message.customer]));\n                    frm.reload_doc();\n                }\n            });\n        }, __('Autoom'));\n    }\n});",
+  "view": "Form"
+ }
+]
